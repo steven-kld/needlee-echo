@@ -15,7 +15,6 @@ export async function uploadChunk({ blob, attempt, questionNum, chunkIndex, uuid
 
     try {
         const res = await fetch(`${BASE_API}/api/upload-chunk?o=${org}&i=${interview}`, {
-            credentials: 'include',
             method: 'POST',
             body: formData
         })

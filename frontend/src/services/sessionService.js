@@ -5,7 +5,6 @@ export async function initializeSession({ o, i, c, uuid }) {
         return mockSession()
     }
     const res = await fetch(`${BASE_API}/api/interview-session`, {
-        credentials: 'include',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ o, i, c, uuid })

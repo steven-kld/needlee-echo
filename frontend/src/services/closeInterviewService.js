@@ -4,7 +4,6 @@ export default async function closeInterviewService({ org, interview, uuid, atte
     try {
         const res = await fetch(`${BASE_API}/api/close-interview`, {
             method: 'POST',
-            credentials: 'include',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 o: org,
