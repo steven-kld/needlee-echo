@@ -6,6 +6,7 @@ export async function fetchQuestions({ o, i, uuid }) {
     }
     const res = await fetch(`${BASE_API}/api/get-questions`, {
         method: 'POST',
+        credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ o, i, uuid })
     })
