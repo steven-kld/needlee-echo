@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import Blobs from '../components/Blobs'
 import Noise from '../components/Noise'
 
 import Error from '../sections/Error'
@@ -145,8 +144,7 @@ export default function MainLayout() {
   }, [micHookError])
 
   return (
-    <div className="min-h-screen bg-needleebg flex items-center justify-center overflow-hidden relative">
-      <Blobs />
+    <div className="min-h-screen flex items-center justify-center overflow-hidden relative">
       <Noise />
 
       {status === 'loading' && <Loading />}

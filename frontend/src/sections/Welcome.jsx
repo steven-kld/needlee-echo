@@ -26,7 +26,7 @@ export default function Welcome({ interview, onStart, error }) {
         className="absolute top-1/2 -translate-y-1/2 left-0 w-full h-auto mask-wave pointer-events-none"
       />
 
-      <div className="relative w-full md:w-[60%] flex flex-col justify-between mb-6 md:mb-0 p-[60px] z-10">
+      <div className="relative w-full md:w-[90%] flex flex-col justify-between mb-6 md:mb-0 p-[60px] z-10">
         <div>
           <Header>{interview.displayName}</Header>
           <Text className="mt-4">{interview.description}</Text>
@@ -57,14 +57,14 @@ export default function Welcome({ interview, onStart, error }) {
         </div>
       </div>
 
-      <div className="relative w-full md:w-[40%] h-full flex items-center justify-center">
+      {/* <div className="relative w-full md:w-[40%] h-full flex items-center justify-center">
         <div className="absolute w-[400px] h-[400px] bg-white/60 blur-[160px] rounded-full z-11" />
         <img
           src="/images/face.png"
           alt="Face illustration"
           className="relative max-h-[380px] z-10 w-auto"
         />
-      </div>
+      </div> */}
     </CardHolder>
   )
 }
