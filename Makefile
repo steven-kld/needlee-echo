@@ -4,7 +4,7 @@ prod:
 	docker compose down --volumes
 	docker system prune -f
 	docker compose down --volumes --remove-orphans
-	docker network rm needlee-ui_default || true
+	docker network rm echo-ui_default || true
 	docker compose build
 	docker compose up -d
 
@@ -29,4 +29,4 @@ clean:
 
 nuke:
 	docker compose down --volumes --remove-orphans
-	docker network rm needlee-ui_default || true
+	docker network rm ech-ui_default || true
