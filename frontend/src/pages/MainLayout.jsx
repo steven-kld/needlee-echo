@@ -29,6 +29,23 @@ export default function MainLayout() {
   const [errorMessage, setErrorMessage] = useState('')
   const [hasFetchedQuestions, setHasFetchedQuestions] = useState(false) // guard
 
+  const getIntegrationParams = () => {
+    const params = new URLSearchParams(window.location.search)
+    const integrationKey = params.get('in')
+  
+    if (!integrationKey) return null
+  
+    const integration = { in: integrationKey }
+  
+    for (const [key, value] of params.entries()) {
+      if (!['o', 'i', 'c', 'in'].includes(key)) {
+        integration[key] = value
+      }
+    }
+  
+    return integration
+  }
+
   const {
     startCheck,
     volumeReady,
@@ -82,18 +99,21 @@ export default function MainLayout() {
       handleCrash(interviewInitErrorMessageMap.en)
       return
     }
+    const integration = getIntegrationParams()
 
-    initializeSession({ o: org, i: interview, c: contact, uuid: generateUUID() })
+    initializeSession({ o: org, i: interview, c: contact, uuid: generateUUID(), integration })
       .then((data) => {
         const fullMeta = {
           ...data,
           org,
           interview,
           contact,
-          uuid: data.uuid
+          uuid: data.uuid,
+          integration: integration
         }
-        setInterviewMeta(fullMeta)
         console.log(fullMeta)
+        setInterviewMeta(fullMeta)
+        
         if (data.complete) {
           setStatus('complete')
         } else {
