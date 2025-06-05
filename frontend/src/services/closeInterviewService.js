@@ -1,6 +1,6 @@
 const BASE_API = import.meta.env.VITE_API_BASE || ''
 
-export default async function closeInterviewService({ org, interview, uuid, attempt }) {
+export default async function closeInterviewService({ org, interview, uuid, attempt, integration }) {
     try {
         const res = await fetch(`${BASE_API}/api/close-interview`, {
             method: 'POST',
@@ -9,7 +9,8 @@ export default async function closeInterviewService({ org, interview, uuid, atte
                 o: org,
                 i: interview,
                 uuid: uuid,
-                attempt: attempt
+                attempt: attempt,
+                integration: integration
             })
         })
     

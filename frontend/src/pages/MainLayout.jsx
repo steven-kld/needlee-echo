@@ -81,7 +81,8 @@ export default function MainLayout() {
       org: interviewMeta.org,
       interview: interviewMeta.interview,
       uuid: uuid,
-      attempt: attempt
+      attempt: attempt,
+      integration: interviewMeta.integration,
     })
   
     console.log('Interview close status:', result)
