@@ -19,7 +19,7 @@ export default function Welcome({ interview, onStart, error }) {
   )
 
   return (
-    <CardHolder additional="flex relative overflow-hidden h-[450px]">
+    <CardHolder additional="flex relative overflow-hidden h-[350px]">
       <img
         src="/images/wave-long.png"
         alt="Wave background"
@@ -56,15 +56,6 @@ export default function Welcome({ interview, onStart, error }) {
           {error && <p className="text-red-500 mt-2">{error}</p>}
         </div>
       </div>
-
-      {/* <div className="relative w-full md:w-[40%] h-full flex items-center justify-center">
-        <div className="absolute w-[400px] h-[400px] bg-white/60 blur-[160px] rounded-full z-11" />
-        <img
-          src="/images/face.png"
-          alt="Face illustration"
-          className="relative max-h-[380px] z-10 w-auto"
-        />
-      </div> */}
     </CardHolder>
   )
 }

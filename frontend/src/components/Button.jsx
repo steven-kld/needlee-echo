@@ -3,10 +3,11 @@ export default function Button({ children, onClick, icon = null, disabled = fals
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`inline-flex items-center gap-2 px-7 pr-8 py-3 w-fit rounded-full text-lg font-semibold transition drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]
+      className={`inline-flex items-center gap-2 px-7 pr-8 py-3 w-fit rounded-full text-lg font-semibold transition
         ${disabled
-          ? 'bg-blue-300 text-white cursor-not-allowed'
-          : 'bg-blue-600 text-white hover:bg-blue-700'}
+          ? 'bg-gradient-to-r from-[#9ACCF9] to-[#D0B9F9] text-white cursor-not-allowed'
+          : 'bg-gradient-to-r from-[#00B2FF] to-[#C084FC] text-white hover:brightness-110'}
+        drop-shadow-[0_0_12px_rgba(192,132,252,0.5)]
       `}
     >
       {icon && <span className="text-xl">{icon}</span>}
