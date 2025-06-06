@@ -32,7 +32,7 @@ export default function Welcome({ interview, onStart, error }) {
           <Text className="mt-4">{interview.description}</Text>
         </div>
 
-        <div className="flex flex-col items-center mt-8 space-y-4">
+        <div className="flex flex-col items-center mt-8 gap-2">
           <Button 
             onClick={() => {
               if (checked) {
