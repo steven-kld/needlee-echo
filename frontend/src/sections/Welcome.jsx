@@ -26,7 +26,7 @@ export default function Welcome({ interview, onStart, error }) {
         className="absolute top-1/2 -translate-y-1/2 left-0 w-full h-auto mask-wave pointer-events-none"
       />
 
-      <div className="relative w-full md:w-[90%] flex flex-col justify-between mb-6 md:mb-0 p-[60px] z-10">
+      <div className="relative w-full flex flex-col justify-between mb-2 md:mb-0 p-[60px] pb-[30px] z-10">
         <div>
           <Header>{interview.displayName}</Header>
           <Text className="mt-4">{interview.description}</Text>
