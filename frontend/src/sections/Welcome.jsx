@@ -32,7 +32,7 @@ export default function Welcome({ interview, onStart, error }) {
           <Text className="mt-4">{interview.description}</Text>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center mt-8 space-y-4">
           <Button 
             onClick={() => {
               if (checked) {
@@ -52,8 +52,8 @@ export default function Welcome({ interview, onStart, error }) {
               {termsCheckboxTextMap[interview.language] || termsCheckboxTextMap.en}
             </Checkbox>
           </div>
-          
-          {error && <p className="text-red-500 mt-2">{error}</p>}
+
+          {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
         </div>
       </div>
     </CardHolder>
