@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  @apply min-h-screen bg-gradient-to-br from-[#d9d5f0] via-[#dfe7f9] to-[#ecf0fb];
+  /* @apply min-h-screen bg-gradient-to-br from-[#d9d5f0] via-[#dfe7f9] to-[#ecf0fb]; */
 }
 
 .mask-wave {
